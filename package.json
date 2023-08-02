@@ -1,0 +1,20 @@
+{
+  "name": "pdf-html-extractor",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.4.2",
+    "svelte": "^4.0.5",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^3.9.179",
+    "save-as": "^0.1.8"
+  }
+}
