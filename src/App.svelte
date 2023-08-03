@@ -85,7 +85,7 @@
     <button on:click={() => success = false}>Do another one</button>
   {:else }
     <label for="file-selector">Click here to select a file</label>
-    <input id="file-selector" type="file" on:change={executeOrder66} class="sr-only" />
+    <input id="file-selector" type="file" on:change={executeOrder66} class="sr-only" accept=".pdf" />
   {/if}
 </main>
 
