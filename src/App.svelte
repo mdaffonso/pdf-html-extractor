@@ -44,13 +44,13 @@
           page.then((page) => page.getTextContent())
             .then((text) => text.items
               .map((s) => s.str)
-              .join('')))}
+              .join(' ').replaceAll('- ', '-')))}
       
       if (!countPromises.length) return
 
       const texts = await Promise.all(countPromises)
 
-      const content = texts.join(' ').replaceAll('- ', '-').match(/(<p><\/p>).*<\/table>/)
+      const content = texts.join('').match(/(<p><\/p>).*<\/table>/)
 
       if (!content) {
         throw new NotPrivacyPolicy()
