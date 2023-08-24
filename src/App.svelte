@@ -44,7 +44,7 @@
           page.then((page) => page.getTextContent())
             .then((text) => text.items
               .map((s) => s.str)
-              .join(' ').replaceAll('- ', '-')))}
+              .join(' ')))}
       
       if (!countPromises.length) return
 
@@ -59,6 +59,8 @@
       code = '<html><head><meta charset="UTF-8" /></head><body>'
       code += content[0]
       code += "</body></html>"
+
+      code = code.replace(/- +/g, '-')
 
       const blob = new Blob([code], { type: 'text/html' })
       filename = `DG-PPG-code-${Date.now()}.html`
